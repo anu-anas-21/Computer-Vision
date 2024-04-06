@@ -1,7 +1,6 @@
 import cv2
 import mediapipe as mp
 import numpy as np
-import time
 import os
 import math
 
@@ -99,8 +98,8 @@ with mp_hands.Hands(min_detection_confidence=0.85, min_tracking_confidence=0.5, 
                         imgCanvas = np.zeros((720, 1280, 3), np.uint8)
                         xp, yp = [x1, y1]
 
-                    selecting = [1, 1, 0, 0, 0]  # Selecting the thickness of the line
-                    setting = [1, 1, 0, 0, 1]  # Setting the thickness chosen
+                    selecting = [1, 1, 0, 0, 0]
+                    setting = [1, 1, 0, 0, 1]
                     if all(fingers[i] == j for i, j in zip(range(0, 5), selecting)) or all(
                         fingers[i] == j for i, j in zip(range(0, 5), setting)):
                         r = int(math.sqrt((x1 - x3) ** 2 + (y1 - y3) ** 2) / 3)
@@ -114,10 +113,9 @@ with mp_hands.Hands(min_detection_confidence=0.85, min_tracking_confidence=0.5, 
                         cv2.circle(image, (x0, y0), int(r / 2), drawColor, -1)
                         if fingers[4]:
                             thickness = r
-                            cv2.putText(image, 'Check', (x4-25, y4-8), cv2.FONT_HERSHEY_TRIPLEX, 0.8, (0,0,0), 1)
+                            cv2.putText(image, 'Check', (x4-25, y4-8), cv2.FONT_HERSHEY_TRIPLEX, 0.8, (0, 0, 0), 1)
 
                         xp, yp = [x1, y1]
-
 
         # header section
         image[0:125, 0:1280] = header
@@ -128,7 +126,7 @@ with mp_hands.Hands(min_detection_confidence=0.85, min_tracking_confidence=0.5, 
         img = cv2.bitwise_and(image, imgInv)
         img = cv2.bitwise_or(img, imgCanvas)
 
-        cv2.imshow("Image", img)
+        cv2.imshow("Virtual Board", img)
         if cv2.waitKey(3) & 0xFF == ord('q'):
             break
 cap.release()
