@@ -28,10 +28,13 @@ I utilized the mediapipe and OpenCV libraries to implement real-time hand tracki
 # Dependencies
 
 → OpenCV
+
 pip install opencv-python
 
 → MediaPipe
+
 pip install mediapipe
 
 → NumPy
+
 pip install numpy
