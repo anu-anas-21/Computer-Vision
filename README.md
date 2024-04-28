@@ -15,5 +15,8 @@ I utilized the mediapipe and OpenCV libraries to implement real-time hand tracki
 
 4.Clear the screen simply by closing your hand.
 
+![Clr Scr](https://github.com/anu-anas-21/Computer-Vision/assets/64194917/a7887855-6abd-42b7-a85c-2a4131a76505)
 
 5.Enter in Stand by Mode using only your index and pinky finger (indicated by a line between these 2 fingers). This mode is useful when you want to draw separate things on the screen.
+
+![Sand By](https://github.com/anu-anas-21/Computer-Vision/assets/64194917/00a82201-5062-4ea1-9a21-5a40a0dd4d29)
