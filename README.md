@@ -39,6 +39,6 @@ pip install mediapipe
 
 pip install numpy
 
-#To Run
+# To Run
 
 python main.py
