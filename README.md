@@ -1,7 +1,7 @@
 # Virtual-Board
 
-I utilized the mediapipe and OpenCV libraries to implement real-time hand tracking and enable drawing on the screen with the index finger.
-
+Virtual Board is an innovative project that transforms hand gestures into a digital drawing experience, making users to interact with a virtual canvas.
+Developed using Python, MediaPipe, and OpenCV, this virtual board allows users to draw, erase, and control the features of brush using hand gestures and movements in real-time.
 # How to Use
 
 1.Use your index and middle finger to activate Selection Mode and choose from various colors or the eraser at the top of the screen.
